@@ -1,0 +1,58 @@
+# Version Control
+.git
+.gitignore
+.github
+
+# Environment Files
+.env
+.env.local
+*.env
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Development Artifacts
+node_modules/
+vendor/
+*.log
+*.debug
+
+# Backup & Temporary Files
+*.bak
+*.swp
+*.swo
+*~
+.tmp
+
+# Build & Compilation Outputs
+build/
+dist/
+out/
+*.o
+*.a
+*.exe
+
+# IDE Specific Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Security Sensitive
+*.key
+*.pem
+*.cert
+
+# Docker Related
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# PHP Specific
+composer.phar
+/vendor/
+
+# Uploads (optional - depends on your use case)
+# src/uploads/*

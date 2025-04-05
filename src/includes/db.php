@@ -1,19 +1,10 @@
 <?php
 session_start();
 
-$host = getenv('DB_HOST') ?: 'db';
+$host = getenv('DB_HOST') ?: 'localhost';
 $user = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASSWORD') ?: 'password123';
+$password = getenv('DB_PASSWORD') ?: '';
 $dbname = getenv('DB_NAME') ?: 'clothing_store';
 
-// Tạo kết nối
-$conn = new mysqli($host, $user, $password, $dbname);
-
-// Kiểm tra kết nối  
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
-
-// Thiết lập charset
-$conn->set_charset("utf8mb4");
-?>
+// Chuyển sang PostgreSQL nếu dùng Render
+$conn = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
